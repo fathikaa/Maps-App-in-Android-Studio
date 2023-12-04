@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="#D2D8B3">
+
+    <TextView
+        android:id="@+id/txtLat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        />
+
+    <TextView
+        android:id="@+id/txtLong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="372dp"
+        android:layout_height="410dp"
+        tools:context=".MapsActivity"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="5dp" />
+
+    <LinearLayout
+        android:layout_width="386dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="-10dp"
+        android:background="#EFE8DD"
+        android:orientation="vertical"
+        android:padding="15dp"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="430dp">
+
+        <TextView
+            android:id="@+id/latmap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Latitude :"
+            android:textColor="#586228"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/idLokasiLat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/latmap"
+            android:layout_marginTop="-1dp"
+            android:hint="Latitude"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/lonmap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idLokasiLat"
+            android:layout_marginTop="-1dp"
+            android:text="Longitude :"
+            android:textColor="#586228"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/idLokasiLng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lonmap"
+            android:layout_marginTop="-1dp"
+            android:hint="Longitude"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/zoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idLokasiLng"
+            android:layout_marginTop="-1dp"
+            android:text="Zoom :"
+            android:textColor="#586228"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/idZoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add"
+            android:layout_marginTop="-1dp"
+            android:hint="Zoom"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/idGo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#604F33"
+            android:minHeight="48dp"
+            android:text="Show Map" />
+    </LinearLayout>
+</RelativeLayout>
